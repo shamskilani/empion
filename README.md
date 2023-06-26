@@ -1,6 +1,6 @@
 # FrontEnd API Documentation
 
-This is the documentation for the Frontend API solution for the Culture Matching application. The solution is implemented using React framework.The solution meets all the specified requirements and has been properly tested, documented, and linted.
+This is the documentation for the Frontend API solution for the Culture Matching application. The solution is implemented using React framework, Tested using jest and bundled using webpack.The solution meets all the specified requirements and has been properly tested, documented, and linted.
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ To run the FrontEnd Culture Matching application, follow the instructions below:
 1. Clone the GitHub repository for the solution:
 
    ```
-   git clone <repository_url>
+   git clone https://github.com/shamskilani/empion
    ```
 
 2. Navigate to the project directory:
@@ -24,6 +24,12 @@ To run the FrontEnd Culture Matching application, follow the instructions below:
    ```
    npm start
    ```
+
+### Testing
+
+```
+npm jest
+```
 
 ## Components
 

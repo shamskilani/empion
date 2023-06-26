@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { API_HOST } from "../config";
 
 const CompanyList = ({ reloadList }) => {
   const [companies, setCompanies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/companies")
+    fetch(API_HOST + "/api/v1/companies")
       .then((response) => response.json())
       .then((data) => setCompanies(data))
       .catch((error) => console.log(error));

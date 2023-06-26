@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_HOST } from "../config";
 
 const CultureTypeForm = ({ onFormSubmit }) => {
   const [name, setName] = useState("");
@@ -11,7 +12,7 @@ const CultureTypeForm = ({ onFormSubmit }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/api/v1/culture_types", {
+      const response = await fetch(API_HOST + "/api/v1/culture_types", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_HOST } from "../config";
 
 const MatchList = (props) => {
   const [applicants, setApplicants] = useState([]);
@@ -10,7 +11,7 @@ const MatchList = (props) => {
   const fetchApplicants = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/api/v1/applicants/matched/" + props.culture_type
+        API_HOST + "/api/v1/applicants/matched/" + props.culture_type
       );
       const data = await response.json();
       setApplicants(data);

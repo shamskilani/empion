@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_HOST } from "../config";
 
 const CompanyForm = ({ onFormSubmit }) => {
   const [name, setName] = useState("");
@@ -7,7 +8,7 @@ const CompanyForm = ({ onFormSubmit }) => {
 
   useEffect(() => {
     // Fetch culture types from the API
-    fetch("http://localhost:3000/api/v1/culture_types")
+    fetch(API_HOST + "/api/v1/culture_types")
       .then((response) => response.json())
       .then((data) => {
         setCultureTypes(data);
@@ -26,7 +27,7 @@ const CompanyForm = ({ onFormSubmit }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/api/v1/companies", {
+      const response = await fetch(API_HOST + "/api/v1/companies", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

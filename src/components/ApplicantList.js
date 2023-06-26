@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_HOST } from "../config";
 
 const ApplicantList = ({ reloadList }) => {
   const [applicants, setApplicants] = useState([]);
@@ -9,7 +10,7 @@ const ApplicantList = ({ reloadList }) => {
 
   const fetchApplicants = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/v1/applicants");
+      const response = await fetch(API_HOST + "/api/v1/applicants");
       const data = await response.json();
       setApplicants(data);
     } catch (error) {

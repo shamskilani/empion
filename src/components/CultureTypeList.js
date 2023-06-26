@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { API_HOST } from "../config";
 
 const CultureTypeList = ({ reloadList }) => {
   const [cultureTypes, setCultureTypes] = useState([]);
 
   useEffect(() => {
     // Fetch culture types from the API
-    fetch("http://localhost:3000/api/v1/culture_types")
+    fetch(API_HOST + "/api/v1/culture_types")
       .then((response) => response.json())
       .then((data) => {
         setCultureTypes(data);
