@@ -44,7 +44,7 @@ const CultureTypeForm = ({ onFormSubmit }) => {
             type="text"
             name="name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value.trim())}
           />
         </label>
         <br />
